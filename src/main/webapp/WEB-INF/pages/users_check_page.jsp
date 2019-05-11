@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Андрей
@@ -11,6 +12,10 @@
     <title>Title</title>
 </head>
 <body>
-    Привет spring!
+<spring:form modelAttribute="userFromServer" method="post" action="/user-system/users/check">
+    <spring:input path="name"/>
+    <spring:input path="password"/>
+    <spring:button>OK</spring:button>
+</spring:form>
 </body>
 </html>
